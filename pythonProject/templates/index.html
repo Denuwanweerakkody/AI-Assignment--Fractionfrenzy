@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Fraction Learning Module</title>
+  <style>
+    body {
+      background-image: url("https://therealschool.in/blog/wp-content/uploads/2021/04/board-5599246_640.png?format=2500w");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      backdrop-filter: blur(10px);
+      color: #ffffff;
+    }
+    .container {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 30px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #FFD700;
+    }
+    .scrolling-questions {
+      max-height: 300px;
+      overflow-y: auto;
+      padding: 15px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+    }
+    .nav-tabs .nav-link.active {
+      background-color: #FFD700;
+    }
+    footer {
+      background-color: #000000;
+      color: #ffffff;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+}
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/">Fraction Frenzy</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Fraction Learning Module</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+</nav>
+
+<!-- Image Slider -->
+<div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel" style="max-height: 250px; overflow: hidden;">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://media.istockphoto.com/id/1138733966/photo/colorful-math-fractions-on-dark-wooden-background-or-table-interesting-math-for-kids.jpg?s=170667a&w=0&k=20&c=Ne-E0fNueRLdDMi552pSiEWYtDLfWVicgro2ysP7NKo=" class="d-block w-100" alt="Banner 1" style="height: 250px; object-fit: cover;">
+    </div>
+    <div class="carousel-item">
+      <img src="https://thumbs.dreamstime.com/b/creative-%D1%81olorful-math-fractions-dark-background-interesting-funny-kids-education-back-to-school-concept-geometry-153693272.jpg" class="d-block w-100" alt="Banner 2" style="height: 250px; object-fit: cover;">
+    </div>
+    <div class="carousel-item">
+      <img src="https://media.istockphoto.com/id/1415323862/vector/business-statistics-and-analytics-infographic-chart-design-template-set-for-dark-theme.jpg?s=612x612&w=0&k=20&c=g-fVnP3wKu0-exRLITvxG22QhK96YrUrTRj-PDSILZg=" class="d-block w-100" alt="Banner 3" style="height: 250px; object-fit: cover;">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="container">
+  <h1>Fraction Learning Module</h1>
+ <!-- Tabs for Different Sections -->
+  <ul class="nav nav-tabs" id="learningTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" id="questions-tab" data-bs-toggle="tab" href="#questions" role="tab" aria-controls="questions" aria-selected="true">Questions</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="feedback-tab" data-bs-toggle="tab" href="#feedback" role="tab" aria-controls="feedback" aria-selected="false">Automated Feedback</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="outcomes-tab" data-bs-toggle="tab" href="#outcomes" role="tab" aria-controls="outcomes" aria-selected="false">Learning Outcomes</a>
+    </li>
+  </ul>
+   <div class="tab-content" id="learningTabsContent">
+    <!-- Questions Tab -->
+    <div class="tab-pane fade show active" id="questions" role="tabpanel" aria-labelledby="questions-tab">
+
+  <!-- Scrolling Questions Section -->
+  <div class="scrolling-questions">
+    <div id="questions-container">
+      {% for question in questions %}
+      <div class="mb-3">
+        <h4>{{ question.questionText }}</h4>
+        <button class="btn btn-outline-primary mt-2" onclick="checkAnswer('{{ question.correctAnswer.fractionValue }}', 'question{{ loop.index }}')">{{ question.correctAnswer.fractionValue }}</button>
+        <button class="btn btn-outline-primary mt-2" onclick="checkAnswer('0.6', '0.5', 'q1')">0.6</button>
+  <button class="btn btn-outline-primary mt-2" onclick="checkAnswer('1/3', '0.5', 'q1')">1/3</button>
+  <button class="btn btn-outline-primary mt-2" onclick="checkAnswer('2/4', '0.5', 'q1')">2/4</button>
+          <p id="question{{ loop.index }}-result" class="mt-3"></p>
+      </div>
+
+  </div>
+</div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+ <!-- Automated Feedback Tab -->
+    <div class="tab-pane fade" id="feedback" role="tabpanel" aria-labelledby="feedback-tab">
+      <h4>Automated Feedback:</h4>
+      <p>This section provides immediate feedback based on your answers, helping you understand your mistakes and learn the correct approach.</p>
+    </div>
+<!-- Background Music -->
+<audio id="background-music" autoplay loop>
+  <source src="balphabet-songbest-270781.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<!-- Music Controls -->
+<div id="music-controls" style="position: fixed; bottom: 10px; right: 10px;">
+  <button id="toggle-music" class="btn btn-primary">Pause Music</button>
+</div>
+
+ <!-- Feedback Form Tab -->
+  <div class="tab-pane fade show active" id="feedback-form" role="tabpanel" aria-labelledby="feedback-form-tab">
+    <h4>Provide Your Feedback:</h4>
+    <form action="submit_feedback.php" method="POST">
+      <div class="mb-3">
+        <label for="name" class="form-label">Your Name</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Your Email</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="feedbackMessage" class="form-label">Your Feedback</label>
+        <textarea class="form-control" id="feedbackMessage" name="feedbackMessage" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit Feedback</button>
+    </form>
+  </div>
+
+    <!-- Learning Outcomes Tab -->
+    <div class="tab-pane fade" id="outcomes" role="tabpanel" aria-labelledby="outcomes-tab">
+      <h4>Learning Outcomes:</h4>
+      <p>This section tracks whether you have achieved the desired learning outcomes, such as mastering the concept of equivalent fractions or understanding fraction simplification.</p>
+    </div>
+  </div>
+</div>
+<footer>
+  <p>&copy; 2024 Fraction Frenzy System by Denuwan Weerakkody - All rights reserved.</p>
+</footer>
+
+<script>
+  function checkAnswer(answer, id) {
+    // You can fetch correct answers dynamically if needed
+    const resultElement = document.getElementById(`${id}-result`);
+    resultElement.textContent = "Correct!"; // Adjust logic dynamically
+    resultElement.style.color = "green";
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

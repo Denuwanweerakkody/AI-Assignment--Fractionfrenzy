@@ -1,0 +1,283 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39/"
+     xml:base="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-39="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39">
+        <rdfs:comment>Fraction Frenzy is an Intelligent Tutoring System (ITS) designed to enhance students&apos; understanding of fractions through interactive learning, testing, and progress tracking.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#hasCorrectAnswer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#hasCorrectAnswer">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Question"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Answer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#hasFraction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#hasFraction">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Answer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Fraction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#hasIncorrectAnswer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#hasIncorrectAnswer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#hasLearningOutcome -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#hasLearningOutcome">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#FractionLearningModule"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#LearningOutcome"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#isPartOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#FractionLearningModule"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Question"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#hasAnswerText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#hasAnswerText">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Answer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#hasQuestionText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#hasQuestionText">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Question"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#hasValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Fraction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Answer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Answer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Converting_Fractions_to_Decimals -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Converting_Fractions_to_Decimals">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Fraction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Equivalent_Fractions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Equivalent_Fractions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Fraction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Fraction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Fraction"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#FractionLearningModule -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#FractionLearningModule"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Home -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Home"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#LearningOutcome -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#LearningOutcome"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Question -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Question"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Simplifying_Fractions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Simplifying_Fractions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Fraction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Adding/Subtracting_Fractions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Adding/Subtracting_Fractions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Fraction"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#ConvertingFractionQuesion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#ConvertingFractionQuesion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Question"/>
+        <untitled-ontology-39:hasCorrectAnswer rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Fraction4"/>
+        <untitled-ontology-39:hasQuestionText>What is 5/2 as a decimal?</untitled-ontology-39:hasQuestionText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#EquivalentFractionQuestion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#EquivalentFractionQuestion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Question"/>
+        <untitled-ontology-39:hasCorrectAnswer rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Fraction2"/>
+        <untitled-ontology-39:hasQuestionText>Which of these is equivalent to 1/2?</untitled-ontology-39:hasQuestionText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Fraction1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Fraction1">
+        <untitled-ontology-39:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</untitled-ontology-39:hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Fraction2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Fraction2">
+        <untitled-ontology-39:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</untitled-ontology-39:hasValue>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Fraction2"/>
+        <owl:assertionProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#hasValue"/>
+        <owl:targetValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</owl:targetValue>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Fraction3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Fraction3">
+        <untitled-ontology-39:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.75</untitled-ontology-39:hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Fraction4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Fraction4">
+        <untitled-ontology-39:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.5</untitled-ontology-39:hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#LearningModule -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#LearningModule">
+        <untitled-ontology-39:hasLearningOutcome rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#LearningOutcome"/>
+        <untitled-ontology-39:isPartOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#EquivalentFractionQuestion"/>
+        <untitled-ontology-39:isPartOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#SimplifyQuestion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#LearningOutcome -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#LearningOutcome"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#SimplifyQuestion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#SimplifyQuestion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Question"/>
+        <untitled-ontology-39:hasCorrectAnswer rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/untitled-ontology-39#Fraction3"/>
+        <untitled-ontology-39:hasQuestionText>what is the value of 6/8?</untitled-ontology-39:hasQuestionText>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
